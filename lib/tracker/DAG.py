@@ -267,7 +267,7 @@ class DAGConfig(object):
     exemplar_size = 127
     instance_size = 255
     total_stride = 8
-    score_size = (instance_size - exemplar_size) // total_stride + 1 + 8  # for ++
+    score_size = (instance_size - exemplar_size) // total_stride + 1 + 8  
     context_amount = 0.5
     ratio = 0.94
 
@@ -279,4 +279,4 @@ class DAGConfig(object):
             self.renew()
 
     def renew(self):
-        self.score_size = (self.instance_size - self.exemplar_size) // self.total_stride + 1 + 8 # for ++
+        self.score_size = (self.instance_size - self.exemplar_size) // self.total_stride + 1 + 8 
