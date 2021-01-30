@@ -17,7 +17,6 @@ Our work is based on the open source code library [Trackit](https://github.com/r
 
 ## Structure
 - `experiments:` training and testing settings
-- `demo:` figures for readme
 - `dataset:` testing dataset
 - `data:` training dataset
 - `lib:` core scripts for all trackers
