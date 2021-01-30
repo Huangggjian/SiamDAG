@@ -11,7 +11,7 @@ Our work is based on the open source code library [Trackit](https://github.com/r
 ## How To Start
 - Tutorial for **SiamDAG**
 
-  Follow SiamDAG **[[Training and Testing]](https://github.com/researchmm/TracKit/blob/master/lib/tutorial/Ocean/ocean.md)** tutorial 
+  Follow SiamDAG **[[Training and Testing]](https://github.com/Huangggjian/SiamDAG/blob/main/lib/tutorial/DAG/dag.md)** tutorial 
 
 
 
