@@ -54,3 +54,8 @@ In root path $SiamDAG,
 python tracking/onekey.py
 ```
 This script integrates **train**, **epoch test** and **tune**. It is suggested to run them one by one when you are not familiar with our whole framework (modify the key `ISTRUE` in `$SiamDAG/experiments/train/DAG.yaml`). When you know this framework well, simply run this one-key script.
+or
+
+```
+python tracking/train_DAG.py --cfg experiments/train/DAG.yaml --gpus 0,1,2 --workers 16  
+```
