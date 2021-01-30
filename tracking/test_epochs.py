@@ -5,12 +5,12 @@ from mpi4py import MPI
 
 
 parser = argparse.ArgumentParser(description='multi-gpu test all epochs')
-parser.add_argument('--arch', dest='arch', default='SiamFCIncep22',
+parser.add_argument('--arch', dest='arch', default='DAG',
                     help='architecture of model')
 parser.add_argument('--start_epoch', default=11, type=int, required=True, help='test end epoch')
 parser.add_argument('--end_epoch', default=50, type=int, required=True,
                     help='test end epoch')
-parser.add_argument('--gpu_nums', default=1, type=int, required=True, help='test start epoch')
+parser.add_argument('--gpu_nums', default=3, type=int, required=True, help='test start epoch')
 parser.add_argument('--anchor_nums', default=5, type=int, help='anchor numbers')
 parser.add_argument('--threads', default=16, type=int, required=True)
 parser.add_argument('--dataset', default='VOT0219', type=str, help='benchmark to test')
@@ -32,7 +32,7 @@ time.sleep(rank * 5)
 
 # 16 together
 
-for i in range(2):
+for i in range(3):
     arch = args.arch
     dataset = args.dataset
     try:
