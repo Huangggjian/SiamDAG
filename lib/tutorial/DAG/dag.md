@@ -23,7 +23,7 @@ conda activate SiamDAG
 In root path `$SiamDAG`,
 
 ```
-python tracking/test_DAG.py --arch DAG --resume snapshot/VOT2019.pth --dataset VOT2019
+python tracking/test_DAG.py --arch DAG --resume snapshot/VOT2019.pth --dataset VOT2019 --align False --epoch_test True
 ```
 ### Evaluation
 ```
