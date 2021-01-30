@@ -1,7 +1,7 @@
 # SiamDAG
 
 
-Our work is based on the open source code library [Trackit](https://github.com/researchmm/TracKit), and the related operations of the environment configuration are exactly the same. Thanks to the contributors of Trackit.
+Our work is based on the open source code library [TracKit](https://github.com/researchmm/TracKit), and the related operations of the environment configuration are exactly the same. Thanks to the contributors of Trackit.
 
 ## Contributors 
 - [Jian Huang](https://github.com/Huangggjian)
@@ -53,7 +53,7 @@ $TrackSeg
 [6] Vu, T., Jang, H., et.al. Cascade RPN: Delving into High-Quality Region Proposal Network with Adaptive Convolution. NIPS2019.
 [7] VOT python toolkit: https://github.com/StrangerZhang/pysot-toolkit
 ```
-## Contributors of Trackit
+## Contributors of TracKit
 - **[Zhipeng Zhang](https://github.com/JudasDie)**
 - **[Houwen Peng](https://houwenpeng.com/)**
 
