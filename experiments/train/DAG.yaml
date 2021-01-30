@@ -1,0 +1,108 @@
+DAG:
+  GPUS: '0,1,2'
+  PRINT_FREQ: 10
+  WORKERS: 16 
+  OUTPUT_DIR: 'logs'   
+  CHECKPOINT_DIR: 'snapshot' 
+
+  TRAIN:
+    ISTRUE: True 
+    MODEL: "DAG"
+    ALIGN: False     
+    START_EPOCH: 0
+    END_EPOCH: 50
+    TEMPLATE_SIZE: 127
+    SEARCH_SIZE: 255
+    BATCH: 32 
+    STRIDE: 8
+    RESUME: False   
+    PRETRAIN: 'pretrain.model'
+    LR_POLICY: 'log'
+    NEG_NUM: 16
+    POS_NUM: 16
+    TOTAL_NUM: 64
+    WARMUP:
+      IFNOT: True
+      TYPE: 'step'
+      EPOCH: 5           
+      KWARGS:
+        start_lr: 0.001   
+        end_lr: 0.005      
+        step: 1
+    LR:
+      TYPE: 'log'
+      KWARGS:
+        start_lr: 0.005        
+        end_lr: 0.00001        
+
+
+    LAYERS_LR: 0.1  
+    BASE_LR: 0.005
+    UNFIX_EPOCH: 10
+    WARM_POLICY: 'step'
+    UNFIX_POLICY: 'log'
+    MOMENTUM: 0.9
+    WEIGHT_DECAY: 0.0001
+    TRAINABLE_LAYER: ['layer1', 'layer2', 'layer3']
+    WHICH_USE: ['YTB', 'VID', 'COCO', 'DET', 'GOT10K' ]
+   
+   
+
+  TEST:    
+    ISTRUE: False  
+    THREADS: 16  
+    DATA: 'VOT2019'
+    START_EPOCH: 11
+    END_EPOCH: 50
+    RGBTSPLIT: None  
+  TUNE:    
+    ISTRUE: False  
+    DATA: 'VOT2019'
+    METHOD: 'TPE'
+    RGBTSPLT: None
+  DATASET:
+    SHIFT: 4
+    SCALE: 0.05
+    COLOR: 1
+    FLIP: 0
+    BLUR: 0
+    ROTATION: 0
+    LABELSMOOTH: False
+    MIXUP: 0
+    GRAY: 0
+    CUTOUT: 0
+    NEG: 0.2
+    SHIFTs: 64
+    SCALEs: 0.18
+
+    VID:
+      PATH: './data/vid/crop511'
+      ANNOTATION: './data/vid/train.json'
+      RANGE: 100
+      USE: 100000
+    YTB:
+      PATH: './data/y2b/crop511'
+      ANNOTATION: './data/y2b/train.json'
+      RANGE: 3
+      USE: 200000
+    GOT10K:
+      PATH: './data/got10k/crop511'
+      ANNOTATION: './data/got10k/all.json'
+      RANGE: 100
+      USE: 200000
+    DET:
+      PATH: './data/det/crop511'
+      ANNOTATION: './data/det/train.json'
+      RANGE: 100
+      USE: 50000
+    COCO:
+      PATH: "./data/coco/crop511"
+      ANNOTATION: "./data/coco/train2017.json"
+      RANGE: 1
+      USE: 50000
+    LASOT:
+      PATH: "./data/lasot/crop511"
+      ANNOTATION: "./data/lasot/train.json"
+      RANGE: 100
+      USE: 200000
+

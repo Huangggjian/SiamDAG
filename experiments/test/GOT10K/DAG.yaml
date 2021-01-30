@@ -1,0 +1,8 @@
+TEST:
+  GOT10K:
+    penalty_k: 0.111
+    lr: 0.776
+    window_influence: 0.212
+    small_sz: 255
+    big_sz: 287
+    ratio: 1

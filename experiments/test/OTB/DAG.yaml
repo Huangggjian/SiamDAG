@@ -1,0 +1,9 @@
+TEST:
+  OTB100:
+    penalty_k: 0.044
+    lr: 0.675
+    window_influence: 0.446
+    small_sz: 255
+    big_sz: 319
+    ratio: 1
+
